@@ -1,0 +1,182 @@
+/* RESET BÁSICO */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* TIPOGRAFÍA Y LAYOUT */
+html,
+body {
+  font-family: Avenir, Verdana, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+  padding: 1em;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+}
+
+/* TITULOS */
+h1 {
+  font-size: 2.2em;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+  color: #000;
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #bc412b;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+h3,
+h4 {
+  font-size: 1.4em;
+  margin-top: 1em;
+  margin-bottom: 0.4em;
+  font-weight: 500;
+  color: #bc412b;
+}
+
+/* LÍNEA SEPARADORA */
+hr {
+  border: 0;
+  border-top: 2px solid #ddd;
+  margin: 1em 0;
+}
+
+/* PÁRRAFOS */
+p {
+  margin-bottom: 1em;
+  text-align: justify;
+}
+
+/* LISTAS */
+ul,
+ol {
+  margin-left: 1.5em;
+  margin-bottom: 1em;
+  list-style: none;
+}
+
+li {
+  margin-bottom: 0.5em;
+  position: relative;
+}
+
+/* TABLAS */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Mantiene el tamaño uniforme de las columnas */
+  margin-bottom: 1.5em;
+}
+
+/* CELDAS */
+td {
+  padding: 0 0 1em 0;
+  vertical-align: top;
+}
+
+/* Primera columna con el ancho del contenido más largo */
+td:first-child {
+  white-space: nowrap; /* Mantiene los datos de fecha en una sola línea */
+  width: 12em; /* Mantiene el ancho fijo */
+  font-weight: bold;
+}
+
+/* Segunda columna */
+td:nth-child(2) {
+  padding-left: 1.5em;
+  width: auto; /* Ocupará el resto del espacio disponible */
+  text-align: justify;
+}
+
+/* ENLACES */
+a {
+  color: #2d4e5e;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #bc412b;
+}
+
+/* CÓDIGO */
+code {
+  font-family: "Monaco", "Menlo", monospace;
+  background: #f4f4f4;
+  padding: 0.2em 0.4em;
+  color: #000;
+  font-size: 0.9em;
+}
+
+/* BLOQUES DE CITAS */
+blockquote {
+  margin: 1em 0;
+  padding-left: 1.2rem;
+  border-left: 3px solid #ddd;
+  color: #555;
+  font-style: italic;
+}
+
+/* ESTILOS PARA ETIQUETAS ESPECIALES */
+#webaddress,
+#address {
+  font-family: Monaco, Menlo, monospace;
+  font-size: 0.9em;
+  color: #000;
+  margin: 0.4em 0;
+}
+
+/* RESPONSIVE DESIGN PARA PANTALLAS PEQUEÑAS */
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3,
+  h4 {
+    font-size: 1.3em;
+  }
+
+  /* Ajustes para mejorar la visualización en pantallas pequeñas */
+  td:first-child {
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+
+  td:nth-child(2) {
+    display: block;
+    padding-left: 0;
+  }
+
+  table {
+    table-layout: auto;
+    width: 100%;
+  }
+}
